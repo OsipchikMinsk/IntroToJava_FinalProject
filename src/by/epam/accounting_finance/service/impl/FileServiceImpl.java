@@ -1,13 +1,15 @@
-package by.epam.accounting_finance.service;
+package by.epam.accounting_finance.service.impl;
 
-import by.epam.accounting_finance.beans.User;
 
-import java.io.File;
-import java.io.IOException;
+import by.epam.accounting_finance.service.FileService;
+
+import java.io.*;
 import java.nio.file.Files;
+import java.util.ArrayList;
 import java.util.List;
 
-public class FileServiceImpl implements FileService{
+
+public class FileServiceImpl implements FileService {
 
     @Override
     public byte[] getUsersData(String name){
@@ -19,4 +21,6 @@ public class FileServiceImpl implements FileService{
         }
         return userBytes;
     }
+
+
 }

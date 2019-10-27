@@ -8,7 +8,4 @@ public interface UserDao {
     User save(User user);
 
     void delete(User user);
-
-
-
 }

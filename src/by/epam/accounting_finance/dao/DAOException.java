@@ -2,6 +2,7 @@ package by.epam.accounting_finance.dao;
 
 public class DAOException extends Exception {
 
+    private static final long serialVersionUID = 3L;
     public DAOException (){
         super();
     }

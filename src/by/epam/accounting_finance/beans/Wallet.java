@@ -9,10 +9,12 @@ public class Wallet implements Serializable {
     private double balance;
     private boolean blocked;
     private long walletID;
+    private TypeOfWallet typeOfWallet;
 
-    public Wallet(double balance, long walletID) {
+    public Wallet(double balance, long walletID, TypeOfWallet typeOfWallet) {
         this.balance = balance;
         this.walletID = walletID;
+        this.typeOfWallet = typeOfWallet;
         if (balance < 0) {
             this.blocked = true;
         } else {
@@ -47,6 +49,14 @@ public class Wallet implements Serializable {
         this.blocked = blocked;
     }
 
+    public TypeOfWallet getTypeOfWallet() {
+        return typeOfWallet;
+    }
+
+    public void setTypeOfWallet(TypeOfWallet typeOfWallet) {
+        this.typeOfWallet = typeOfWallet;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -69,5 +79,8 @@ public class Wallet implements Serializable {
                 ", blocked=" + blocked +
                 ", walletID=" + walletID +
                 '}';
+    }
+    enum TypeOfWallet{
+        RUB, DOLLAR, EURO
     }
 }

@@ -1,11 +1,13 @@
-package by.epam.accounting_finance.service;
+package by.epam.accounting_finance.service.impl;
 
 import by.epam.accounting_finance.beans.User;
+import by.epam.accounting_finance.service.FileService;
+import by.epam.accounting_finance.service.SerializationService;
+import by.epam.accounting_finance.service.impl.FileServiceImpl;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.util.List;
 
 public class SerializationServiceImpl implements SerializationService {
     private FileService fileService = new FileServiceImpl();

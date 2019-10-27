@@ -1,17 +1,18 @@
 package by.epam.accounting_finance.service;
 
-import by.epam.accounting_finance.beans.User;
+import by.epam.accounting_finance.util.UtilProperty;
 
-import java.io.IOException;
-import java.util.List;
+
+
 
 public interface FileService {
 
-    String USER_FILE_PATH = "asdasd";
-    String PASS_FILE_PATH = "asdasd";
-
+    String USER_FILE_PATH = UtilProperty.getPropertyValue("path.file");
 
     byte[] getUsersData(String name);
+
+
+
 
 
 }
